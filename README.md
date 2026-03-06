@@ -20,19 +20,12 @@ O Todo App é uma aplicação web completa que permite aos utilizadores criar e 
 
 - **Autenticação**: registo, login e logout de utilizadores
 - **Autorização**: cada utilizador acede apenas às suas próprias tarefas (políticas Laravel)
-- **CRUD completo**: criar, visualizar, editar e eliminar tarefas
-- **Soft delete**: tarefas eliminadas são mantidas na base de dados
-- **Estados de tarefa**: Pendente, Em progresso e Concluída
-- **Prioridades**: Baixa, Média e Alta
-- **Data de conclusão**: campo opcional com validação de data
-- **Filtros**: pesquisa por texto, filtragem por estado e prioridade, ordenação por data/prioridade/título
-
+- **Gestão de Tarefas**: Criação, edição, visualização e eliminação de tarefas, bem como a opção de filtrar por estado, prioridadde, data de finalização.
 ---
 
 ## Tecnologias
 
-| Backend | PHP 8.4 + Laravel 12
-| Frontend | Tailwind CSS 4 + Vite
-| Base de dados (produção) | MySQL
-| Base de dados (testes) | MYSQL
-| Testes | Pest
+| Backend - PHP 8.4 + Laravel 12
+| Frontend - Tailwind CSS 4 + Vite
+| Base de dados - MySQL
+| Testes - Pest
