@@ -8,6 +8,7 @@ use Rector\TypeDeclaration\Rector\ClassMethod\ReturnTypeFromStrictTypedCallRecto
 use Rector\TypeDeclaration\Rector\ClassMethod\ReturnUnionTypeRector;
 use Rector\TypeDeclaration\Rector\Closure\AddClosureVoidReturnTypeWhereNoReturnRector;
 use Rector\TypeDeclaration\Rector\StmtsAwareInterface\DeclareStrictTypesRector;
+use RectorLaravel\Rector\Class_\ModelCastsPropertyToCastsMethodRector;
 use RectorLaravel\Set\LaravelSetProvider;
 
 return RectorConfig::configure()
@@ -31,6 +32,7 @@ return RectorConfig::configure()
             __DIR__.'/resources/views',
         ],
         AddArrowFunctionReturnTypeRector::class,
+        ModelCastsPropertyToCastsMethodRector::class,
     ])
     ->withPhpSets()
     ->withSetProviders(LaravelSetProvider::class)

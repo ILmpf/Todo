@@ -48,6 +48,7 @@
             "npm run build"
         ],
         "format": [
+            "vendor/bin/rector",
             "vendor/bin/pint"
         ],
         "dev": [
