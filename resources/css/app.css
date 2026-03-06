@@ -1,11 +1,59 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
+@source '../../app/**/*.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans:
+        "Inter", "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+
+    /* ── Beige surfaces ─────────────────────────────────────────── */
+    --color-beige-50: #faf6ef; /* cards, nav, inputs (lightest)  */
+    --color-beige-100: #f0e8d8; /* page background                */
+    --color-beige-200: #e2d4c0; /* borders, dividers              */
+    --color-beige-300: #c9b89e; /* stronger borders / hover       */
+
+    /* ── Warm text scale ────────────────────────────────────────── */
+    --color-warm-300: #bfb0a0; /* chevrons, subtle icons         */
+    --color-warm-400: #9e8e7e; /* placeholders, very muted       */
+    --color-warm-500: #7a6a58; /* secondary / muted text         */
+    --color-warm-600: #6e5847; /* medium labels                  */
+    --color-warm-700: #4a3d2f; /* body / label text              */
+    --color-warm-900: #2c2416; /* headings, primary text         */
+
+    /* ── Accent – warm amber-brown ──────────────────────────────── */
+    --color-accent-50: #fef5e7;
+    --color-accent-100: #fde9ca;
+    --color-accent-400: #e09420;
+    --color-accent-500: #c97d1c; /* focus rings                    */
+    --color-accent-600: #a8620a; /* primary buttons / links        */
+    --color-accent-700: #8a4e06; /* hover                          */
+    --color-accent-800: #6b3b04; /* active / pressed               */
+}
+
+/* Focus ring */
+*:focus-visible {
+    outline: 2px solid var(--color-accent-500);
+    outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-beige-300);
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-warm-400);
 }
